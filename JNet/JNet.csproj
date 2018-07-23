@@ -209,9 +209,16 @@
     <Compile Include="Migrations\201807231513308_InitialDatabase.Designer.cs">
       <DependentUpon>201807231513308_InitialDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807231529030_AddJobModel.cs" />
+    <Compile Include="Migrations\201807231529030_AddJobModel.Designer.cs">
+      <DependentUpon>201807231529030_AddJobModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -295,6 +302,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807231513308_InitialDatabase.resx">
       <DependentUpon>201807231513308_InitialDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807231529030_AddJobModel.resx">
+      <DependentUpon>201807231529030_AddJobModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
