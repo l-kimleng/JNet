@@ -18,18 +18,18 @@ namespace JNet.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class JNetDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Job> Jobs { get; set; }
 
-        public ApplicationDbContext()
+        public JNetDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public static ApplicationDbContext Create()
+        public static JNetDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new JNetDbContext();
         }
     }
 }

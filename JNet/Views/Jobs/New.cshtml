@@ -12,36 +12,54 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Title)
         @Html.TextBoxFor(m => m.Title, new {placeholder="Title", @class="form-control"})
+        @Html.ValidationMessageFor(m => m.Title, "", new {@class="text-danger"})
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.PostDate)
         @Html.TextBoxFor(m => m.PostDate, new { placeholder = "Post Date", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.PostDate, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.AppliedDate)
         @Html.TextBoxFor(m => m.AppliedDate, new { placeholder = "Applied Date", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.AppliedDate, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Url)
         @Html.TextBoxFor(m => m.Url, new { placeholder = "Url", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Url, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Company.Name)
         @Html.TextBoxFor(m => m.Company.Name, new { placeholder = "Company", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Company.Name, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Company.Location.City)
         @Html.TextBoxFor(m => m.Company.Location.City, new { placeholder = "City", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Company.Location.City, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Company.Location.State)
         @Html.TextBoxFor(m => m.Company.Location.State, new { placeholder = "State", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Company.Location.State, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Company.Location.ZipCode)
         @Html.TextBoxFor(m => m.Company.Location.ZipCode, new { placeholder = "Zip Code", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Company.Location.ZipCode, "", new { @class = "text-danger" })
     </div>
     <button class="btn btn-primary">Cancel</button>
     <button class="btn btn-primary" type="submit">Save</button>
+}
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            if('@ViewBag.Message' === "Add")
+                toastr.success('Success');
+        });
+    </script>
 }
 

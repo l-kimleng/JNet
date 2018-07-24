@@ -5,14 +5,14 @@ namespace JNet.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<JNet.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<JNet.Models.JNetDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(JNet.Models.ApplicationDbContext context)
+        protected override void Seed(JNet.Models.JNetDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
