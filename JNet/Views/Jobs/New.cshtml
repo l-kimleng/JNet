@@ -49,8 +49,8 @@
         @Html.TextBoxFor(m => m.Company.Location.ZipCode, new { placeholder = "Zip Code", @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Company.Location.ZipCode, "", new { @class = "text-danger" })
     </div>
-    <button class="btn btn-primary">Cancel</button>
     <button class="btn btn-primary" type="submit">Save</button>
+    <button class="btn btn-primary">Cancel</button>
 }
 
 @section scripts
